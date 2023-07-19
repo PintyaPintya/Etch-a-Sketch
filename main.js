@@ -7,3 +7,18 @@ for(let i = 0; i < 16; i++){
         container.appendChild(newDiv)
     }    
 }
+
+let boxes = document.getElementsByClassName('box')
+boxes = Array.from(boxes)
+
+boxes.forEach(box => {
+    box.addEventListener('mouseenter',function(){
+        box.style.backgroundColor = 'red'
+    })
+});
+
+boxes.forEach(box => {
+    box.addEventListener('mouseleave',function(){
+        box.style.backgroundColor = 'white'
+    })
+});
